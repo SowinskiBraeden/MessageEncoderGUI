@@ -1,0 +1,26 @@
+.coder {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+.inputArea {
+  margin-top: 10px;
+}
+
+.output {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.output h2 {
+  text-align: center;
+}
+
+.output textarea {
+  width: 30vh;
+  height: 30vh;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Message Encoder GUI</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="coder">
+      <!-- Encoder -->
+    <div class="inputArea">
+      <input placeholder="message" value="" id="messageEncode" name="messageEncode">
+      <button onclick="startEncode()">Encode Message</button>
+    </div>
+
+    <!-- Decoder -->
+    <div class="inputArea">
+      <input placeholder="message" value="" id="messageDecode" name="messageEncode">
+      <button onclick="startDecode()">Decode Message</button>
+    </div>
+    </div>
+
+    <!-- Output -->
+    <div class="output">
+      <h2>Output</h2>
+      <textarea id="output"></textarea>
+    </div>
+  </body>
+
+  <script src="messageEncoder.js"></script>
+  <script>
+    function startEncode() {
+      let inputText = document.getElementById("messageEncode").value
+      let responce = encode(inputText);
+      document.getElementById("output").innerHTML = JSON.stringify(responce, null, 4)
+    }
+
+    function startDecode() {
+      let inputText = JSON.parse(document.getElementById("messageDecode").value)
+      let responce = decode(inputText);
+      document.getElementById("output").innerHTML = JSON.stringify(responce, null, 4)
+    }
+  </script>
+</html>
